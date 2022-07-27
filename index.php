@@ -33,7 +33,7 @@ if(!isset($_SESSION['login'])){
     <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-uppercase">
   <div class="container">
-    <a class="navbar-brand" href="#">LAPORAN KERJA</a>
+    <a class="navbar-brand" href="#">LAPORAN KERJA PEGAWAI</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
