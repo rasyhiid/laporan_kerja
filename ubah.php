@@ -6,7 +6,6 @@ if(!isset($_SESSION['login'])){
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +26,7 @@ if(!isset($_SESSION['login'])){
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Data Pegawai | LAPORAN KERJA</title>
+    <title>Ubah | Data Pegawai | LAPORAN KERJA</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -43,7 +42,7 @@ if(!isset($_SESSION['login'])){
             <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
+            <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="logout.php">Logout</a>
@@ -58,57 +57,66 @@ if(!isset($_SESSION['login'])){
 <div class="container">
     <div class="row my-3">
         <div class="col-md">
-            <h2 class="text-uppercase text-center fw-bold">Data Pegawai</h2>
+            <h2><i class="bi bi-pencil-square"></i>&nbsp;Ubah Data Pegawai</h2>
         </div>
         <hr>
     </div>
-    <div class="row">
+    <div class="row mb-3">
         <div class="col-md">
-            <a href="tambah.php" class= "btn btn-primary"><i class="bi bi-person-plus-fill"></i>&nbsp;Tambah Data Pegawai </a>
-            <a href="#" class="btn btn-success ms-1" target="blank"><i class="bi bi-file-earmark-spreadsheet-fill"></i>&nbsp;Export ke Excel</a>
-        </div>
-    </div>
+            <form action="" method="post">
+            <div class="mb-3">
+                <label for="id" class="form-label">ID Pegawai</label>
+                <input type="number" class="form-control w-50" id="exampleFormControlInput1" name="id" autocomplete="off" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="nip_nik" class="form-label">NIP/NIK</label>
+                <input type="number" class="form-control w-50" id="exampleFormControlInput1" name="nip_nik" autocomplete="off" required>
+            </div>
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control w-50" id="exampleFormControlInput1" name="nama" autocomplete="off" required>
+            </div>
+            <div class="mb-3">
+                <label>Jabatan</label>
+                <select class="form-select w-50" name="jabatan">
+                    <option selected disabled> ------------------------------------Pilih Jabatan-----------------------------------</option>
+                    <option value="Kepala">Kepala</option>
+                    <option value="Anggota">Anggota</option>
+                    <option value="Kabid">Kabid</option>
+                    <option value="Kasub">Kasub</option>
+                </select>   
+            </div>
+            <div class="mb-3">
+                <label>Golongan Ruang</label>
+                <select class="form-select w-50" name="gol_ruang">
+                    <option selected disabled> --------------------------------Pilih Golongan Ruang-------------------------------</option>
+                    <option value="Kepala">Kepala</option>
+                    <option value="Anggota">Anggota</option>
+                    <option value="Kabid">Kabid</option>
+                    <option value="Kasub">Kasub</option>
+                </select>   
+            </div>
+            <div class="mb-3">
+                <label>Bidang Tugas</label>
+                <select class="form-select w-50" name="bid_tugas">
+                    <option selected disabled> --------------------------------Pilih Bidang Tugas-------------------------------</option>
+                    <option value="Kepala">Kepala</option>
+                    <option value="Anggota">Anggota</option>
+                    <option value="Kabid">Kabid</option>
+                    <option value="Kasub">Kasub</option>
+                </select>   
+            </div>
+            <div class="mb-3">
+                <label for="Gambar" class="form-label">Gambar</label>
+                <input class="form-control form-control-sm w-50" id="gambar" type="file" name="gambar">
+            </div>
+            <hr>
+            <a href="index.php" class="btn btn-secondary">Kembali</a>
+            <button type="submit" name="ubah" class="btn btn-warning">Ubah</button>
+           
 
-    <div class="row my-5">
-        <div class="col-md">
-        <table id="example" class="table table-striped" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011-04-25</td>
-                <td>$320,800</td>
-            </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011-07-25</td>
-                <td>$170,750</td>
-            </tr>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009-01-12</td>
-                <td>$86,000</td>
-            </tr>
-        </tbody>
-        </table>
+
+            </form>
         </div>
     </div>
 </div>
@@ -136,16 +144,6 @@ if(!isset($_SESSION['login'])){
 </div>
 <!-- close footer -->
     <!-- Bootstrap  -->
-    <!-- Data Tables -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
-
-
-    <script>
-        $(document).ready(function () {
-        $('#example').DataTable();
-        });
-    </script>
+    
 </body>
 </html>

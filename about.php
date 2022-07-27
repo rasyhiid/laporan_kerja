@@ -10,6 +10,8 @@ if(!isset($_SESSION['login'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,10 +42,10 @@ if(!isset($_SESSION['login'])){
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
+            <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="logout.php">Logout</a>
@@ -74,38 +76,65 @@ if(!isset($_SESSION['login'])){
         <table id="example" class="table table-striped" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>ID</th>
+                <th>NIP / NIK</th>
+                <th>NAMA</th>
+                <th>JABATAN</th>
+                <th>FOTO</th>
+                <th>AKSI</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011-04-25</td>
-                <td>$320,800</td>
+                <td>01</td>
+                <td>121918171615</td>
+                <td>Radea Shiddiq</td>
+                <td>Kuli Dakwah</td>
+                <td>
+                    <img src="img/img1.jpg" style="width: 150px;">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success btn-sm">
+                    <i class="fa fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm">
+                    <i class="fa fa-trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011-07-25</td>
-                <td>$170,750</td>
+                <td>02</td>
+                <td>387465</td>
+                <td>Syufinur</td>
+                <td>Kuli Bola</td>
+                <td>
+                    <img src="img/img2.jpg" style="width: 150px;">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success btn-sm">
+                    <i class="fa fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm">
+                    <i class="fa fa-trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009-01-12</td>
-                <td>$86,000</td>
+                <td>03</td>
+                <td>985657</td>
+                <td>Juhari</td>
+                <td>Kuli Masjid</td>
+                <td>
+                    <img src="img/img3.jpg" style="width: 150px;">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success btn-sm" href="ubah.php">
+                    <i class="fa fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm">
+                    <i class="fa fa-trash"></i>
+                    </button>
+                </td>
             </tr>
         </tbody>
         </table>
@@ -119,9 +148,7 @@ if(!isset($_SESSION['login'])){
     <div class="row">
         <div class="col-md-6">
             <h4 class="text-uppercase fw-bold">About</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, labore suscipit, 
-                ipsum deserunt itaque perspiciatis, animi fugit aperiam ullam quaerat placeat reiciendis 
-                expedita obcaecati quos quae deleniti. Commodi, aliquid vitae.</p>
+            <p>Coba terus Sampe bisa</p>
         </div>
         <div class="col-md-6 text-center link">
             <h4 class="text-uppercase fw-bold">Link Account</h4>
